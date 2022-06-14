@@ -1,0 +1,19 @@
+{{#each errors}}
+<div class="alert alert-danger">{{texto}}</div>
+{{else}}
+{{/each}}
+<h3>Novo Projeto: </h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/projects/new" method="POST">
+            <input type="hidden" name="id" value="{{id}}">
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" placeholder="Nome do Projeto" class="form-control">
+            <label for="slug">Slug: </label>
+            <input type="text" id="slug" name="slug" placeholder="Slug do Projeto" class="form-control">
+            <br>
+            <button type="submit" class="btn btn-success">Adicionar Arquivo</button>
+            <input type="file" name="file">
+        </form>
+    </div>
+</div>

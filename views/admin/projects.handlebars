@@ -1,0 +1,17 @@
+<h2>Lista de Projetos: </h2>
+<hr>
+<a href="/admin/projects/add"><button class="btn btn-success">Novo Projeto</button></a>
+<hr>
+{{#each projects}}
+    <div class="card">
+        <div class="card-body">
+            <h3>Projeto: {{name}}</h4>
+            <p>Slug: {{slug}}</p>
+            <small>Criado em: {{date}}</small><br>
+            <a href="/admin/projects/edit/{{_id}}"><button class="btn btn-success mt-3">Editar Projeto</button></a>
+            <a href="/admin/projects/delete/{{_id}}"><button class="btn btn-danger mt-3">Excluir Projeto</button></a>
+        </div>
+    </div>
+{{else}}
+
+{{/each}}
